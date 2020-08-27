@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Abigayle Hickey </title>
+    <style>
+		/* Header */
+        h1 {
+            color: white;
+            font-size: 2.5em;
+            }
+		
+		/* Titles */
+        h2 {
+            background: lightblue;
+            font-size: 2.0em;
+            border-style: ridge;
+            border-width: 5px;
+            border-color: white;
+			padding: 10px;
+			margin-left: 30%;
+			margin-right: 30%;
+			border-radius: 25px;
+        }
+		
+		/* Sub titles */
+		h3 {
+		
+		}
+		/* Tab words */
+		h4{
+		}
+		
+		p {
+		font-size: 18px;
+		color: black;
+		background-color: white;
+		padding: 15px;
+		border-style: ridge;
+		border-color: lightblue;
+		border-width: 5px;
+		border-radius: 15px;
+		width: 55%
+		}
+		
+		/* Style the tab */
+		.tab {
+		  overflow: hidden;
+		  border: 1px solid #ccc;
+		  background-color: #f1f1f1;
+		  width: 80%;
+		  text-align: center;
+		}
+
+		/* Style the buttons inside the tab */
+		.tab button {
+		  background-color: inherit;
+		  border: none;
+		  outline: none;
+		  cursor: pointer;
+		  padding: 14px 10px;
+		  transition: 0.1s;
+		  font-size: 20px;
+		  font-weight: bold;
+		}
+
+		/* Change background color of buttons on hover */
+		.tab button:hover {
+		  background-color: #ddd;
+		}
+
+		/* Create an active/current tablink class */
+		.tab button.active {
+		  background-color: #ccc;
+		}
+
+		/* Style the tab content */
+		.tabcontent {
+		  display: none;
+		  padding-top: 2%;
+		  border: 1px solid #ccc;
+		  border-top: none;
+		}
+		
+		/* Style the header */
+		.header {
+		  height: 70px;
+		  background: #555;
+		  color: #f1f1f1;
+		}
+		
+		.column {
+		  float: left;
+		  width: 50%;
+		  padding: 10px;
+		}
+		
+		* {
+			box-sizing: border-box;
+		}
+		
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		/* Page content */
+		.content {
+		  padding: 16px;
+		}
+
+		/* The sticky class is added to the header with JS when it reaches its scroll position */
+		.sticky {
+		  position: fixed;
+		  top: 0;
+		  width: 100%
+		}
+
+		/* Add some top padding to the page content to prevent sudden quick movement 
+		(as the header gets a new position at the top of the page (position:fixed and top:0) */
+		.sticky + .content {
+		  padding-top: 102px;
+		}
+		
+		.collapsible {
+		background-color: white;
+		  color: black;
+		  font-weight: bold;
+		  font-size: 13px;
+		  cursor: pointer;
+		  padding: 12px;
+		  width: 60%;
+
+		  border-style: solid;
+		  border-color: lightblue;
+		  border-top-width: 10px;
+		  border-bottom-width: 10px;
+		  border-left-width: 20px;
+		  border-right-width: 20px;
+		  
+		  text-align: center;
+		  outline: none;
+		  font-size: 15px;
+		}
+
+		.active, .collapsible:hover {
+		  background-color: lightblue;
+		}
+		
+		.collapsecontent {
+		  padding: 0 18px;
+		  display: none;
+		  overflow: hidden;
+		  background-color: #f1f1f1;
+		  width: 60%;
+		  border-radius: 10px;
+		}
+		
+		table {
+		  font-family: arial, sans-serif;
+		  border-collapse: collapse;
+		  width: 100%;
+		}
+
+		td, th {
+		  border: 1px solid black;
+		  text-align: left;
+		  padding: 8px;
+		  font-weight: normal;
+		}
+
+		tr:nth-child(even) {
+		  background-color: #dddddd;
+		}
+		
+		img{
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			border-color: grey;
+			border-style: solid;
+			border-width: 3px;
+		}
+		
+
+		
+    </style>
+</head>
+
+<body style= "background: url(https://i1.wp.com/static.web-backgrounds.net/uploads/2011/09/preview18.jpg); background-size: 100%;">
+	
+		<div class="top-container">
+		<div class="row">
+			<div class="column">
+				<h1 style="text-align: center; font-size: 3.5em; margin-top: 10%; margin-left: 10%">
+					Abigayle Hickey
+				</h1>
+				<h1 style="text-align: center; margin-top: -2%; margin-left: 10%">
+					(709) 690-5902
+					<br>
+					achickey@mun.ca
+				</h1>
+			</div>
+			
+			<div class="column">
+				<img src="Photo.jpeg" 
+				style="width: 80%; height: 80%">
+			</div>
+		</div>
+		</div>
+	
+		<div class="row">
+		<div class="header" id="myHeader">
+			<center>
+			<b>
+			<div class="column" style="text-align: center; margin-top: 1%; font-size:24px; color: white">
+						Abigayle Hickey |
+						
+						(709) 690-5902 |
+						
+						achickey@mun.ca
+			</div>
+			
+			<div class="column">
+					<div class="tab">
+						<button class="tablink" onclick="openCity(event, 'About Me'); topFunction()" id="defaultOpen"> About Me </button>
+						<button class="tablink" onclick="openCity(event, 'Education'); topFunction()"> Education </button>
+						<button class="tablink" onclick="openCity(event, 'Work Experience'); topFunction()"> Work Experience </button>
+					</div>
+			</div>
+			</center>
+			</b>
+		</div>
+		</div>
+		
+		<div class="content">
+		<div id="About Me" class="tabcontent">
+			<center>
+			<h2> About Me </h2>	
+			<p>
+			My name is Abigayle Hickey and I am a computer engineering student at Memorial University. 
+			I am performing the biomedical stream and will be graduating in May of 2022. 
+			My aspiration is to combine my computer engineering skills with the medicine field. 
+			<br>
+			<br>
+			I have a very determined mind set, which strengthens my ability to learn quickly and maintain focus when working. 
+			I am very hard working and genuinly care about the effort I put into my work.
+			<br>
+			<br>
+			Please see a full list of my skills either through my resume linked below, or throughout 
+			this website. As well my GitHub is linked to show some of the various coding projects I have worked on. 
+			
+			<br>
+			<br>
+			<b>
+			<a href="Engineering Resume.pdf"> Click here to view my Resume </a>
+			<br>
+			<br>
+			Link to my GitHub:
+			<a href="https://github.com/abigayleh"> https://github.com/abigayleh </a>
+			</b>
+			</p>
+			
+			<h2>Hobbies and Interests</h2>
+			<p style="text-align: left">
+				<b> Career interests: </b>
+				<br>
+				I have always been gripped by the medicine field, in particular genetics, 
+				neurology and forensics. 
+				Genetic Engineering and Bioinstrumentation are very fascinating to me. 
+				
+				<br>
+				<br>
+				<b>Drawing and design:</b> 
+				<br>
+				Most of my hobbies are intertwined with an appreciation for art, including comic books, movies and
+				video games. Drawing is a fun hobby of mine and I have greatly enjoyed designing
+				various programs I have created in the past. 
+				<br>
+				<br>
+				<b> Running and Boxing </b> 
+				<br>
+				I love exercising and building my physique. I have participated in 
+				marathons and as well enjoy boxing as a stress relief. 
+			</p>		
+			
+			<h2> Skills </h2>
+			<ul style="text-align: left; columns: 3; color: black; 	background-color: white;
+					padding: 15px; border-style: ridge; border-color: lightblue; border-width: 5px; 
+					border-radius: 15px; width: 55%">
+				<b> Technical Skills: </b>
+				<br>
+				<br>
+				<u> Languages: </u>
+				<br>
+				<li style="margin-left: 4%; margin-top: 1%"> C++ </li>
+				<li style="margin-left: 4%"> JavaScript </li>
+				<li style="margin-left: 4%"> Python </li>
+				<li style="margin-left: 4%"> HTML and CSS </li>
+				<li style="margin-left: 4%"> SQL and XML</li>
+				<li style="margin-left: 4%"> Linux (command line) </li>
+				<li style="margin-left: 4%"> VHDL </li>
+				<li style="margin-left: 4%"> Swift and XCode </li>
+				<br>
+				<u> Applications: </u>
+				<br>
+				<li style="margin-left: 4%"> Microsoft Office </li>
+				<li style="margin-left: 4%"> Eclipse </li>
+				<li style="margin-left: 4%"> Visual Studio </li>
+				<li style="margin-left: 4%"> PyCharm </li>
+				<li style="margin-left: 4%"> SOLIDWORKS </li>
+				<li style="margin-left: 4%"> MATLAB and Simulink</li>
+				<li style="margin-left: 4%"> QuartusPrime and ModelSim </li>
+				<li style="margin-left: 4%"> Solarwinds </li>
+				<br>
+				<br>
+				
+				<b> Soft Skills: </b>
+				<br>
+				<br>
+				<li style="margin-left: 4%"> Communication (written and oral) </li>
+				<li style="margin-left: 4%"> Interpersonal/team work </li>
+				<li style="margin-left: 4%"> Independent management </li>
+				<li style="margin-left: 4%"> Leadership and planning </li>
+				<li style="margin-left: 4%"> Innovative problem solving and design </li>
+				<li style="margin-left: 4%"> Adaptability and perseverance </li>
+			</ul>
+			
+			<h2> Contact Me </h2>
+			
+				<div class="container">
+					<form action="mailto:achickey@mun.ca" method = "post"
+					enctype="text/plain">
+
+					<p>
+					
+					If you have any questions or queries feel free to send me an
+					e-mail! Contact me at <b> achickey@mun.ca </b> or using the form below:
+					<br>
+					
+					<br>
+					<b> Name: </b>
+					<br>
+					<input type="text" name="name" placeholder="Your name..">
+					<br>
+					<br>
+					<b> E-mail: </b>
+					<br>
+					<input type="text" name="mail" placeholder="Your email..">
+					<br>
+					<br>
+					<b> Comment: </b>
+					<br>
+					<input type="text" name="comment" size="50" placeholder="Your input or questions..">
+					<br>
+					<br>
+					<input type="submit" value="Submit">
+					</p>
+					
+					</form>
+				</div>
+			
+		</div>
+		
+		<div id="Education" class="tabcontent">
+			<center>
+			<h2>Education</h2>
+			<img src="https://www.mun.ca/marcomm/images/content/94-180726465.jpg" style="width: 25%; height: 25%;" />
+			<img src="https://www.thetelegram.com/media/photologue/photos/cache/TEL-XXX-XXXX2018-MUNScenic2_large.JPG" style="width: 40%; height: 40%" />
+			<p>
+				I began my computer engineering degree September 2017. My current cumulative GPA is 3.25 out of 4, with an average of 75.4%. 
+				<br>
+				As of my most recent study term (Winter 2020), I have a GPA of 4 out of 4, with an average of 78%. 
+				<br>
+				To view my unofficial MUN Transcript 
+			<a href="MUN Transcript.pdf"> Click here </a>
+			<br>
+			Last updated: July 2020
+			<br>
+			</p>
+			<button type="button" class="collapsible"> Work Semester - Summer 2020 </button>
+			<div class="collapsecontent">
+				<table style="width:100%">
+				<tr> 
+					<th style="font-weight: bold"> Course Name </th>
+					<th style="font-weight: bold"> Overall Grade </th>
+					<th style="font-weight: bold"> Skills Aquired </th>
+				</tr>
+				
+				<tr>
+					<th> Introduction to Anatomy and Physiology </th>
+					<th> 90 </th>
+					<th> 	
+						<li> Learned concepts of human physiology, including the skeletal, muscular, articular, neural, respiratory 
+						and cardiac systems </li>
+						<li> Completion of anatomical labs, which identified components of the skeletal, muscular and articular systems </li>
+					</th>
+				</tr>
+				
+				<tr>
+					<th> Introduction to Psychology </th>
+					<th> 93 </th>
+					<th> 	
+						<li> Study of history, research methodology, behavioural neuroscience, sensation and perception, 
+						consciousness, learning and memory </li>
+					</th>
+				</tr>
+				
+				<tr>
+					<th> Sociology - Technology and Society </th>
+					<th> 71 </th>
+					<th> 	
+						<li> Covered concepts on role of technology in society and societys role in shaping technology </li>
+						<li> Participated in weekly discussion groups and wrote multiple essays pertaining to various topics </li>
+					</th>			
+				<tr>
+				</table>
+				</div>			
+
+
+			<button type="button" class="collapsible"> Semester 5 - Winter 2020 </button>
+			<div class="collapsecontent">
+				<table style="width:100%">
+				<tr> 
+					<th style="font-weight: bold"> Course Name </th>
+					<th style="font-weight: bold"> Overall Grade </th>
+					<th style="font-weight: bold"> Skills Aquired </th>
+				</tr>
+				
+				<tr>
+					<th> Probability and Random Processes </th>
+					<th> 82 </th>
+					<th> 	
+						<li> Basic concepts of probability, random variables, multiple
+							 random variables, descriptive statistics and random processes</li>
+						<li> Use of MATLAB for assignments  </li>
+					</th>
+				</tr>
+				
+				<tr>
+					<th> Control Systems </th>
+					<th> 82 </th>
+					<th> 	
+						<li> Control systems with negative feedback, mathematical modelling and transfer functions 
+							of electromechanical systems, block diagram and signal flow graphs and controller design
+						</li>
+						<li> Rouths stability criterion, root locus analysis and design, 
+						frequency and transient response analysis, Bode diagram and gain and 
+							 phase margins</li>
+						<li> Independent research project using MATLAB </li>
+						<li>  Use of Simulink to complete labratories </li>
+					</th>
+				</tr>
+				
+				<tr>
+					<th> Digital Systems </th>
+					<th> 73 </th>
+					<th> 	
+						<li> Concepts, language and tools pertaining to specification, 
+							modelling, analysis, simulation, testing and synthesis of digital systems, including
+							PLD, FPGA and ASIC devices</li>
+						<li> VHDL in labratories and final project using QuartusPrime and ModelSim </li>
+					</th>			
+				</tr>
+				
+				<tr>
+					<th> Algorithms </th>
+					<th> 70 </th>
+					<th> 	
+						<li> Theories and practicies for design of correct and efficient computing systems,
+							methods of verification and algorithmic problem solving strategies</li>
+						<li> Use of Daphne in assignments </li>
+					</th>
+				</tr>
+				
+				<tr>
+					<th> Software Design </th>
+					<th> 82 </th>
+					<th> 	
+						<li> Java principles and coding </li>
+						<li> Understanding of developmental process, including design
+							documentation, Unified Modelling Language, use cases, class diagrams and sequences, 
+							creational, structural and behavioural patterns</li>
+						<li> Design of team iPhone application using Swift and XCode </li>
+					</th>
+				</tr>
+				</table>
+				</div>
+		
+			<button type="button" class="collapsible"> Semester 4 - Spring 2019 </button>
+			<div class="collapsecontent">
+				<table style="width:100%">
+				<tr> 
+					<th style="font-weight: bold"> Course Name </th>
+					<th style="font-weight: bold"> Overall Grade </th>
+					<th style="font-weight: bold"> Skills Aquired </th>
+				</tr>
+				
+				<tr>
+					<th> Discrete Math for Computer Engineers </th>
+					<th> 79 </th>
+					<th> 	
+						<li> Propositional logic, introductory predicate logic, mathematical reasoning
+							induction
+						</li>
+						<li>
+							Understanding of sets, relations, functions, integers, graphs, trees and models of 
+							computation</li>
+					</th>
+				</tr>
+				
+				<tr>
+					<th> Intro to Systems and Signals </th>
+					<th> 85 </th>
+					<th> 	
+						<li> Principles of linear superposition and time invariance, properties and 
+							 and use of delta function, application of complex variables and functions
+						</li>
+						<li> Impulse and step responses, input-output relations of continuous-time systems using convolution and 
+							 and transfer functions, Fourier transform and Laplace transform</li>
+						<li> MATLAB labs </li>
+					</th>
+				</tr>
+				
+				<tr>
+					<th> Electronic Devices and Circuits </th>
+					<th> 84 </th>
+					<th> 	
+						<li> Internal structure of electronic devices, 
+							DC and small-signal models, analysis of p-n junction diodes, bipolar
+							junction transistors and field effect transistors</li>
+						<li> Labs using breadboards, oscillators and function generators  </li>
+					</th>			
+				</tr>
+				
+				<tr>
+					<th> Microprocessors </th>
+					<th> 82 </th>
+					<th> 	
+						<li> Understanding of microprocesser architecture, assembly language programming, 
+							addressing modes, table look up, memory mapped devices, interfacing
+							techniques, parallel, serial and timing control and analog input and output
+						</li>
+						<li> AVR ATMega32 assembly programming </li>
+					</th>
+				</tr>
+				
+				<tr>
+					<th> Data Structures </th>
+					<th> 60 </th>
+					<th> 	
+						<li> Understanding of data strucutres including recursive structures, 
+							time complexity and efficient data structures and data abstraction</li>
+					</th>
+				</tr>
+				</table>
+				</div>
+			
+			<button type="button" class="collapsible"> Semester 3 - Fall 2018 </button>
+			<div class="collapsecontent">
+				<table style="width:100%">
+				<tr> 
+					<th style="font-weight: bold"> Course Name </th>
+					<th style="font-weight: bold"> Overall Grade </th>
+					<th style="font-weight: bold"> Skills Aquired </th>
+				</tr>
+				
+				<tr>
+					<th> Engineering Professionalism </th>
+					<th> 85 </th>
+					<th> 	
+						<li> Understanding of professional engineering practice, including
+							communication, ethics and occupational health and safety </li>
+							<li> Completion of first aid course </li>
+					</th>
+				</tr>
+				
+				<tr>
+					<th> Engineering Mathematics </th>
+					<th> 60 </th>
+					<th> 	
+						<li> Differential equations of first order and first degree, 
+							linear ordinary differential equations of higher order 
+						</li>
+						<li> Methods of undetermined coefficients, Laplace transforms, 
+							partial differentiation and convergence series  </li>
+					</th>
+				</tr>
+				
+				<tr>
+					<th> Circuit Analysis </th>
+					<th> 76 </th>
+					<th> 	
+						<li> Wye-delta transformation, bridge circuits, sinusoidal steady state analysis and complex power transfer</li>
+						<li> Completion of circuits labs using breadboards, oscilloscopes and function
+							generators </li>
+					</th>			
+				</tr>
+				
+				<tr>
+					<th> Digital Logic </th>
+					<th> 56 </th>
+					<th> 	
+						<li> Boolean algebra, minimization techniques, combinational logic
+							circuit analysis and design, state machine design and
+							 implementation </li>
+						<li> Understanding of logic equipment (flip flops, decoders, multiplexors, 
+							registers and counters </li>	 
+						<li> Completion of logic based labs using breadboards and various
+							logic components (flip flops, multiplexors, decoders)</li>
+					</th>
+				</tr>
+				
+				<tr>
+					<th> Foundations of Programming </th>
+					<th> 60 </th>
+					<th> 	
+						<li> Object-oriented programming using C++, abstraction, types, contracts,
+							and debugging skills</li>
+					</th>
+				</tr>
+								
+				<tr>
+					<th> Physics of Device Materials </th>
+					<th> 68 </th>
+					<th> 	
+						<li> Structures of crystalline solids, quantum mechanics
+							and statistical mechanics of charge carriers </li>
+					</th>
+				</tr>
+				</table>
+				</div>
+				
+				<button type="button" class="collapsible"> Semester 2 - Winter 2018 </button>
+			<div class="collapsecontent">
+				<table style="width:100%">
+				<tr> 
+					<th style="font-weight: bold"> Course Name </th>
+					<th style="font-weight: bold"> Overall Grade </th>
+					<th style="font-weight: bold"> Skills Aquired </th>
+				</tr>
+				
+				<tr> 
+					<th> Introduction to Programming </th>
+					<th> 81 </th>
+					<th> 	
+						<li> C++ basics, including variables, loops and classes </li>
+						<li> Completion of C++ labs to control robot </li>
+					</th>
+				</tr>
+				
+				<tr>
+					<th> Engineering Graphics and Design  </th>
+					<th> 84 </th>
+					<th> 	
+						<li> Understanding of graphic communication and procedures
+						of design process </li>
+						<li> Use of CAD </li>
+						<li> Team design project using SOLIDWORKS, including
+							report and presentation </li>
+					</th>
+				</tr>
+				
+				<tr>
+					<th> Professional Development </th>
+					<th> Pass </th>
+					<th> 	
+						<li> Understanding of principles and	
+							etiquette of professional work environments </li>
+					</th>
+				</tr>
+				
+				<tr>
+					<th> Linear Algebra </th>
+					<th> 72 </th>
+					<th> 	
+						<li> Understanding of Euclidean n-space, vector operations, complex numbers,
+							linear transformations on n-space, matrices, determinants and systems
+							of linear equations </li>
+					</th>			
+				</tr>
+				
+				<tr>
+					<th> General Physics: Oscillations and Waves </th>
+					<th> 77 </th>
+					<th> 	
+						<li> Understanding of simple harmonic motion, travelling waves, 
+							sound waves, and standing waves, electric fields and potentials, 
+							magnetic forces and fields and electric current and resistance</li>
+						<li> Completion of course based labs </li>
+					</th>
+				</tr>
+			
+				</table>
+				</div>
+				
+				<button type="button" class="collapsible"> Semester 1 - Fall 2017 </button>
+			<div class="collapsecontent">
+				<table style="width:100%">
+				<tr> 
+					<th style="font-weight: bold"> Course Name </th>
+					<th style="font-weight: bold"> Overall Grade </th>
+					<th style="font-weight: bold"> Skills Aquired </th>
+				</tr>
+				
+				<tr>
+					<th> General Chemistry  </th>
+					<th> 70 </th>
+					<th> 	
+						<li> Understanding of basic chemistry concepts, including
+							gases, thermochemistry, atomic structure, periodic properties and bonding</li>
+						<li> Performance of chemistry labs and completion of lab safety </li>
+					</th>
+				</tr>
+				
+				<tr>
+					<th> Engineering Statics </th>
+					<th> 76 </th>
+					<th> 	
+						<li> Forces and moments using vector algebra, understanding of 
+							equilibrium conditions and the usage of free body diagrams </li>
+					</th>
+				</tr>
+				
+				<tr>
+					<th> Mechanisms and Electric Circuit </th>
+					<th> 80 </th>
+					<th> 	
+						<li> Analysis of DC circuits used in control, measurement and 
+							instrumentation systems
+						</li>
+						<li> Soldering workshop </li>
+						<li> Completion of circuits labs using breadboards and wiring </li>
+						<li> Design of Excel based catapult project, which team won for most accurate design </li>
+					</th>			
+				</tr>
+				
+				<tr>
+					<th> Second Level Calculus </th>
+					<th> 90 </th>
+					<th> 	
+						<li> Integral calculus, including 
+							Reimann sums, techniques of integration and improper 
+							integrals </li>
+					</th>
+				</tr>
+				
+				<tr>
+					<th> General Physics: Mechanics </th>
+					<th> 85 </th>
+					<th> 	
+						<li> Problem solving two dimensional motion, forces and Newtons 
+							Laws, energy, momentum, rotational motion and torque and 
+							oscillations </li>
+						<li> Completion of course based labs </li>
+					</th>
+				</tr>
+				</table>
+				</div>
+		
+				<button type="button" class="collapsible"> High School University Courses</button>
+			<div class="collapsecontent">
+				
+				<table style="width:100%">
+				<tr> 
+					<th style="font-weight: bold"> Course Name </th>
+					<th style="font-weight: bold"> Overall Grade </th>
+					<th style="font-weight: bold"> Skills Aquired </th>
+				</tr>
+				
+				<tr>
+					<th> International Baccalaureate IB Biology </th>
+					<th> 4/5 </th>
+					<th>
+						<li> Understanding of principles of biology, including 
+							cell biology, genetics, ecology, evolution and 
+								human physiology</li>
+						<li> Team research and presentation project </li>
+						<li> Performance of independent research lab 
+							experiment, report and presentation, 
+							that won bronze award </li>
+					</th>
+				</tr>
+				
+				<tr>
+					<th> Advanced Placement Psychology </th>
+					<th> 5/5 </th>
+					<th> 
+						<li> Understanding of topics including research methods, 
+							biology of behaviour, personality and learning </li>
+						<li> Creation and presentation of sensation box, which 
+							won for best of class</li>
+					</th>
+				</tr>
+				
+				<tr>
+					<th> Advanced Placement Calculus </th>
+					<th> 90 </th>
+					<th>
+						<ul>
+							<li> Understanding of introduction to calculus, including
+								limits, continuity and deratives </li>
+						</ul>
+					</th>			
+				</tr>
+				
+				<tr>
+					<th> Advanced Placement Literature and Writing </th>
+					<th> 5/5 </th>
+					<th> 
+						<ul>
+							<li> Critical reading and writing </li>
+							<li> Analyzing texts </li>
+							<li> Constructing essays, revising and editing </li>
+						</ul>
+					</th>
+				</tr>
+				</table>
+			</div>
+			<br>
+			<br>
+		</div>
+		</center>
+		
+		<div id="Work Experience" class="tabcontent">
+			<center>
+			<h2>Work Experience</h2>
+			<img src="https://i0.wp.com/techweez.com/wp-content/uploads/2013/10/Nokia-logo.jpg?fit=2048%2C875&ssl=1" 
+			style="width:30%; height:30%;" />
+			<img src="https://media.gettyimages.com/photos/signage-stands-outside-nokia-oyj-headquarters-in-ottawa-ontario-on-picture-id1088643122" 
+			style="width: 50%; height:50%;" />
+			
+			<h2>Overview</h2>
+				<p>
+				For the duration of September 2019 to December 2019 I worked as the
+				A6E Customer Applications Engineering Co-op student for Nokia. 
+				My job centered around the  
+				Nokia Network Services Platform (NSP) Software-Defined Networking (SDN)
+				component that provides operators with a more efficient way to automate and  
+				optimize network services across IP/MPLS and optical layers. 
+				My task was to analyze and troubleshoot issuses surrounding this product, both 
+				within the GUI interface and within the coding of the product. This work term gave me 
+				amazing command line Linux experience, and I also learned a great deal of networking information, 
+				both through online tools as well as physically, by troubleshooting routers through their physical lab. 
+				
+				<br>
+				<br>
+				
+				I recieved an outstanding work term review from supervisor. 
+				<br>
+				For a more detailed view of my review, 
+				<a href="Nokia Workterm Feedback.pdf"> click here. </a> 
+				<br>
+				Feel free to contact my supervisor Rhys McNaughton at 
+				rhys.mcnaughton@nokia.com or +1 (613) 784-1516
+				</p>
+			<h2>Skills Aquired</h2>
+				<ul style="text-align: left; columns: 2; color: black; 	background-color: white;
+					padding: 15px; border-style: ridge; border-color: lightblue; border-width: 5px; 
+					border-radius: 15px; width: 55%">
+					
+					<br>
+					<u> Technical Skills </u>
+					<li style="margin-left: 4%"> Utilized Linux command line tools for creating and updating 
+						NFM-P software</li>
+					<li style="margin-left: 4%"> Installed and updated various databases and servers using VMs and Linux</li>
+					<li style="margin-left: 4%"> Troubleshooted NFM-P product using SQL and XML </li>
+					<li style="margin-left: 4%"> Utilized WireShark for node troubleshooting </li>
+					<li style="margin-left: 4%"> Created virtual simulator and added customer configurations for troubleshooting </li>
+					<li style="margin-left: 4%"> Updated HTML based team page </li>
+					<li style="margin-left: 4%"> Created snmpbulkwalk using APEs server </li>
+					<li style="margin-left: 4%"> Created report and presentation using Microsoft Word and PowerPoint</li>
+					<br>
+					
+					<u> Soft Skills </u>
+					<li style="margin-left: 4%"> Independently problem solved solutions for customers </li>
+					<li style="margin-left: 4%"> Independently learned unfamiliar topics and adapted to new environments </li>
+					<li style="margin-left: 4%"> Wrote investigative analysis reports of product fault recreations 
+					for tiered support system detailing customer problems </li>
+					<li style="margin-left: 4%"> Worked and communicated within team environment </li>
+					<li style="margin-left: 4%"> Self managed incoming tickets based on prioritization and deadlines</li>
+					<li style="margin-left: 4%"> Wrote work term report detailing troubleshooting process of NFM-P product </li>
+					<li style="margin-left: 4%"> Presented work term report to team </li>
+					
+				</ul>
+				
+			<img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7f/Nalcor_Energy_Logo.svg/1200px-Nalcor_Energy_Logo.svg.png" 
+			style="background: white; width: 30%; height: 30%" />
+			<img src="https://i.cbc.ca/1.4104724.1494260022!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_780/nalcor-energy-hq-cbc.jpg" 
+			style="width: 50%; height: 50%" />
+			<h2>Overview</h2>
+				<p>
+				For the duration of January 2019 to April 2019 I worked as the
+				LCP HVdc Specialities - System Integration and Telecoms Engineering Co-op student for Nalcor. 
+				My contribution to this team focused on assisting project management with finishing their 
+				required documents, in particular the CCTV component for the sites of the Churchill Falls
+				Project. This work term gave me great insight into the requirements for project management
+				and an understanding of networking basics, as well as hands on experience with networking products, 
+				such as adapter cables, storage boxes and routers. 
+				
+				<br>
+				<br>
+				I recieved an above expectations work term review from my supervisor. 
+				<br>
+				Feel free to contact my supervisor Gilles DeGonzague at 
+				GillesDeGonzague@lowerchurchillproject.ca or +1 (709) 733-4490
+				</p>
+				
+			<h2>Skills Aquired</h2>
+				<ul style="text-align: left; columns: 2; color: black; 	background-color: white;
+					padding: 15px; border-style: ridge; border-color: lightblue; border-width: 5px; 
+					border-radius: 15px; width: 55%">
+					
+					<br>
+					<u> Technical Skills </u>
+					<li style="margin-left: 4%"> Designed CCTV Specifications Excel spreadsheet </li>
+					<li style="margin-left: 4%"> Updated SolarWinds database</li>
+					<li style="margin-left: 4%"> Calculated camera storage requirements and designed storage requirements</li>
+					<li style="margin-left: 4%"> Edited site drawings in Microsoft Visio</li>
+					<li style="margin-left: 4%"> Created and edited company Axis Site Designer </li>
+					<li style="margin-left: 4%"> Learned spreadsheet symbols and used them when editing spreadsheets </li>
+					<li style="margin-left: 4%"> Created report and presentation using Microsoft Word and PowerPoint</li>
+					<br>
+					<br>
+					<br>
+					
+					<u> Soft Skills </u>
+					<li style="margin-left: 4%"> Worked independently, researching queries when needed</li>
+					<li style="margin-left: 4%"> Learned basics of project and documentation management, applied when
+					editing and organizing site manuals and drawings</li>
+					<li style="margin-left: 4%"> Collaborated and communicated within team environment </li>
+					<li style="margin-left: 4%"> Attended project site and recieved safety training </li>
+					<li style="margin-left: 4%"> Took meeting minutes and distributed them to team </li>
+					<li style="margin-left: 4%"> Wrote work term report detailing an overview of Network Basics </li>
+					<li style="margin-left: 4%"> Presented work term report to team </li>
+					
+				</ul>
+					
+			<br>
+			
+			<img src="https://www.fasttrack.co.uk/wp-content/uploads/kca-deutag-group.jpg" 
+			style="background: white; width: 48%; height: 48%" />
+			<img src="https://media.glassdoor.com/l/1b/09/e4/a0/kca-deutag-headquarters.jpg" 
+			style=" width:50%; height: 50%" />
+			<h2>Overview</h2>
+				<p>
+					For the duration of May 2018 to August 2018 I worked as the
+					Project Management Engineering Co-op student for KCA Deutag. 
+					My contribution to this team focused on completing the certification database for the company, 
+					which I did complete before I left. After the Excel spreadsheet was complete, I began my own design
+					of the physical certification database they required, having meetings with both my supervisor and 
+					finance team of the company. This work term gave me a lot of experience working within a team setting, 
+					and managing my own priorities and maintaing a schedule. 
+				
+					<br>
+					<br>
+					I recieved an outstanding work term review from supervisor
+					<br>
+					Recieved outstanding work term review from supervisor
+					Feel free to contact my supervisor Christina Fong at 
+					christinafong709@gmail.com
+				</p>
+			<h2>Skills Aquired</h2>
+				<ul style="text-align: left; columns: 2; color: black; 	background-color: white;
+					padding: 15px; border-style: ridge; border-color: lightblue; border-width: 5px; 
+					border-radius: 15px; width: 55%">
+
+					<br>
+					<u> Technical Skills </u>
+					<li style="margin-left: 4%"> Designed certification database using Excel </li>
+					<li style="margin-left: 4%"> Utilized PDF tools to search for certificate documents </li>
+					<li style="margin-left: 4%"> Wrote work term report detailing specifications for Certfication Database </li>
+					<li style="margin-left: 4%"> Learned safety protocols and toured building for safety issues and wrote safety debriefing </li>
+					
+					<br>
+					<br>
+					<br>
+					<u> Soft Skills </u>
+					<li style="margin-left: 4%"> Created weekly progress reports for supervisor, detailing and charting progress </li>
+					<li style="margin-left: 4%"> Independently worked to find certificates, often researching own methods and techniques </li>
+					<li style="margin-left: 4%"> Maintained own schedule and completed all tasks supervisor requested </li>
+					<li style="margin-left: 4%"> Held meetings with supervisor overviewing my own design for database </li>
+				</ul>
+
+		</div>
+		</center>
+
+
+<script>
+	function openCity(evt, cityName) {
+	  var i, tabcontent, tablinks;
+	  tabcontent = document.getElementsByClassName("tabcontent");
+	  for (i = 0; i < tabcontent.length; i++) {
+		tabcontent[i].style.display = "none";
+	  }
+	  tablinks = document.getElementsByClassName("tablinks");
+	  for (i = 0; i < tablinks.length; i++) {
+		tablinks[i].className = tablinks[i].className.replace("active", "");
+	  }
+	  document.getElementById(cityName).style.display = "block";
+	  evt.currentTarget.className += "active";
+	}
+	
+	// Get the element with id="defaultOpen" and click on it
+	document.getElementById("defaultOpen").click();
+</script>
+
+<script>
+	  function topFunction() {
+		document.body.scrollTop = 351; // For Safari
+		document.documentElement.scrollTop = 351; // For Chrome, Firefox, IE and Opera
+}
+</script>
+
+<script>
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the header
+var header = document.getElementById("myHeader");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+	
+	
+<script>
+	window.onbeforeunload = function () {
+	window.scrollTo(0, 0);}
+</script>	
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var collapsecontent = this.nextElementSibling;
+    if (collapsecontent.style.display === "block") {
+      collapsecontent.style.display = "none";
+    } else {
+      collapsecontent.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
